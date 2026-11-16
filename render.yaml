@@ -1,0 +1,11 @@
+services:
+    - type: web
+    name: satgii-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health
+    envVars:
+            - key: PYTHONUNBUFFERED
+        value: "1"
